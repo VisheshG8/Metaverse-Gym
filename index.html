@@ -9,6 +9,38 @@
 </head>
 <link rel="stylesheet" href="CSS/style.css">
 <link href="http://fonts.cdnfonts.com/css/space-quest" rel="stylesheet">
+    <script src="https://cdn.xanpay.com/sdk/xanpay-sdk-1.0.0.js"></script>
+  <script>
+    async function checkout() {
+        const orders = [{ 
+          id: 'kun1Ja2', 
+          name: "iPhone", 
+          quantity: 1, 
+          amount: 151
+      }];
+        
+      const options = {
+        apiKey: 'a04668f6e299280a7485e0002ce9729c',
+        currency: 'HKD', 
+        amount: 151, 
+        orders,
+        environment: XanPaySDK.Environment.Sandbox, 
+        redirectUrl: 'https://xanpay.com/',
+        notifyPayload: {"orderId": "251"},
+        customer: {
+            email: "test@test.test",
+            firstName: "Test",
+            lastName: "Tester",
+            phone: {
+                code: "+65",
+                phone: "12345678901"
+            }
+        }
+      };
+      const url = await XanPaySDK.constructCheckoutUrl(options);
+      window.open(url, '_blank');
+    }
+  </script>
 
 <style>
     /* CSS Reset */
@@ -150,6 +182,7 @@
             <button class="btn">Call Us Now</button>
             <button class="btn">Email Us</button>
             <button class="btn" tabindex="0" type="button">Connect Wallet </button>
+            <button onclick="checkout()">Checkout</button>
         
 
         </div>

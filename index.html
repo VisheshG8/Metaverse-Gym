@@ -6,38 +6,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta Fitness</title>
-    <script src="https://cdn.xanpay.com/sdk/xanpay-sdk-1.0.0.js"></script>
-    <script>
-      async function checkout() {
-          const orders = [{ 
-            id: 'kun1Ja2', 
-            name: "iPhone", 
-            quantity: 1, 
-            amount: 151
-        }];
-          
-        const options = {
-          apiKey: 'a04668f6e299280a7485e0002ce9729c',
-          currency: 'HKD', 
-          amount: 151, 
-          orders,
-          environment: XanPaySDK.Environment.Sandbox, 
-          redirectUrl: 'https://xanpay.com/',
-          notifyPayload: {"orderId": "251"},
-          customer: {
-              email: "test@test.test",
-              firstName: "Test",
-              lastName: "Tester",
-              phone: {
-                  code: "+65",
-                  phone: "12345678901"
-              }
-          }
-        };
-        const url = await XanPaySDK.constructCheckoutUrl(options);
-        window.open(url, '_blank');
-      }
-    </script>
+     <script src="https://cdn.xanpay.com/widget/1.widget.js"></script>
+<script>
+    (function (w, d, s, o, f, js, fjs) {
+        w[o] = w[o] || function () { (w[o].q = w[o].q || []).push(arguments) };
+        js = d.createElement(s), fjs = d.getElementsByTagName(s)[0];
+        js.id = o; js.src = f; js.async = 0; fjs.parentNode.insertBefore(js, fjs);
+    }(window, document, 'script', 'widgetName', 'https://cdn.xanpay.com/widget/widget.js'));
+    window['widgetName']('init', {
+        apiKey: '3ebcdcce0f2b14981fe1d26a8efbfc00',
+        currency: 'INR',
+        amount: 10000,
+        env: 'production',
+        
+        // Optional params
+        isSandbox: true,
+        paymentStyles: 'grid',
+        widgetSize: 'regular',
+        darkMode: false,
+    })
+</script>
+<div id="xanpay-widget"></div>
 </head>
 
 

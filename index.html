@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Meta Fitness</title>
    
 </head>
@@ -14,16 +14,16 @@
 <link href="http://fonts.cdnfonts.com/css/space-quest" rel="stylesheet">
 
 <style>
+   
     /* CSS Reset */
     body {
         font-family: 'Space Quest', sans-serif;
         color: white;
-        margin: 0px;
-        padding: 0px;
+        margin: 0;
+        padding: 0;
         background-image: url(img/Metahealth.jpg);
         background-size: cover;
         background-repeat: no-repeat;
-
     }
 
     .left {
@@ -31,7 +31,6 @@
         left: 10px;
         top: 20px;
         display: inline-block;
-
     }
 
     .left img {
@@ -39,8 +38,6 @@
         margin: 21px;
         width: 95px;
         filter: brightness(1);
-
-
     }
 
     .left div {
@@ -87,23 +84,22 @@
         text-decoration: underline;
     }
 
-    .btn {
+        .btn {
         font-family: 'Space Quest', sans-serif;
         padding: 4px 14px;
         border-radius: 100%;
         margin: 5px;
         background-color: goldenrod;
         cursor: pointer;
-
     }
 
     .container {
         font-size: 40px;
         text-align: center;
         margin-top: 200px;
-
     }
-    .container span{
+
+    .container span {
         margin-right: 145px;
     }
 
@@ -116,11 +112,12 @@
         width: auto;
         border-radius: 100px;
     }
+
     .button a {
         display: inline-block;
-        text-decoration:none;
+        text-decoration: none;
         padding: 10px;
-        margin-top: 10px ;
+        margin-top: 10px;
         margin-right: 125px;
         color: aqua;
         background-color: black;
@@ -128,7 +125,24 @@
         border-radius: 10%;
     }
     
+    /* Make the header responsive */
+    @media screen and (max-width: 960px) {
+        .left, .mid, .right {
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+
+        .left img {
+            margin: 0 auto;
+        }
+
+        .mid {
+            margin: 10px auto;
+        }
+    }
 </style>
+
 
 <body>
     <header class="header">

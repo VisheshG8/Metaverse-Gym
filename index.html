@@ -8,22 +8,24 @@
     <title>Meta Fitness</title>
    
 </head>
-
-
-<link rel="stylesheet" href="CSS/style.css">
 <link href="http://fonts.cdnfonts.com/css/space-quest" rel="stylesheet">
 
 <style>
    
     /* CSS Reset */
     body {
+        display: flex;
+        flex-direction: column;
         font-family: 'Space Quest', sans-serif;
         color: white;
         margin: 0;
         padding: 0;
         background-image: url(img/Metahealth.jpg);
-        background-size: cover;
         background-repeat: no-repeat;
+        background-size: 100vw;
+        background-size: cover;
+        /* background-color: blueviolet; */
+
     }
 
     .left {
@@ -49,8 +51,8 @@
     .mid {
         font-size: 30px;
         font-family: 'Space Quest', sans-serif;
-        display: block;
-        width: 50%;
+        display: flex;
+        justify-content: center;
         margin: 21px auto;
     }
 
@@ -126,8 +128,17 @@
     }
     
     /* Make the header responsive */
-    @media screen and (max-width: 960px) {
-        .left, .mid, .right {
+    @media screen and (max-width: 500px) {
+
+        img{
+            display: none;
+        }
+        
+
+
+
+
+        /* .left, .mid, .right {
             display: block;
             text-align: center;
             width: 100%;
@@ -139,7 +150,7 @@
 
         .mid {
             margin: 10px auto;
-        }
+        } */
     }
 </style>
 
@@ -163,12 +174,7 @@
             </ul>
         </div>
         <!-- right for buttons -->
-        <div class="right">
-            <button class="btn">Call Us Now</button>
-            <button class="btn">Email Us</button>
-            <button class="btn"type="button" onclick="checkout()">Checkout</button>
         
-
         </div>
     </header>
     <div class="container">
